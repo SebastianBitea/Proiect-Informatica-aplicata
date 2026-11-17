@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ro">
+  <!-- lang="ro" = pagina este în limba română -->
+  <head>
+    <!-- <head> = informații despre pagină, care nu se văd în pagină -->
+    <meta charset="UTF-8" />
+    <!-- charset = ca diacriticele (ă, â, î, ș, ț) să se vadă corect -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport = pagina se potrivește pe ecranul telefonului -->
+    <title>NexTech — Sisteme de securitate în Oradea</title>
+    <!-- title = textul din tab-ul browserului -->
+    <!-- Mai târziu, când avem fișierul de stiluri, adăugăm aici linia:
+         <link rel="stylesheet" href="css/style.css"> -->
+  </head>
+  <body>
+    <!-- <body> = tot ce se vede în pagină -->
+
+    <!-- ===== ANTETUL:Nextech ===== -->
+    <header>
+      <!-- <header> = partea de sus a paginii -->
+      <p><strong>NexTech</strong> · Sisteme de securitate</p>
+
+      <nav>
+        <!-- <nav> = meniul de navigare, o listă de linkuri -->
+        <ul>
+          <!-- <ul> = listă cu buline, <li> = un element din listă -->
+          <li><a href="index.html" aria-current="page">Acasă</a></li>
+          <li><a href="servicii.html">Servicii</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <!-- <a href="..."> = link către altă pagină -->
+          <!-- aria-current="page" = marchează pagina pe care ne aflăm acum -->
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== CONȚINUTUL PRINCIPAL AL PAGINII ===== -->
+    <main>
+      <!-- <main> = conținutul principal. Există un singur <main> pe pagină. -->
+      <section id="prezentare">
+        <!-- <section> = o secțiune din pagină, cu un titlu al ei -->
+        <h1>Sisteme de securitate pentru casă și firmă</h1>
+        <!-- h1 = titlul principal. Pe fiecare pagină avem un singur h1. -->
+        <p>
+          NexTech montează camere de supraveghere, sisteme de alarmă și control
+          acces în Oradea și împrejurimi.
+        </p>
+        <!-- <p> = un paragraf de text -->
+        <p><a href="contact.html">Cere o ofertă gratuită</a></p>
+      </section>
+
+      <section id="de-ce-noi">
+        <h2>De ce să ne alegi</h2>
+        <!-- h2 = titlu de secțiune, mai mic decât h1 -->
+        <ul>
+          <li>Evaluare gratuită la domiciliu</li>
+          <li>Echipamente cu garanție de 2 ani</li>
+          <li>Montaj în maximum 48 de ore</li>
+          <li>Aplicație pe telefon pentru camere și alarmă</li>
+        </ul>
+        <!-- Schimbați punctele cu ale voastre, ce credeți că ar conta pentru un client. -->
+      </section>
+
+      <section id="despre">
+        <h2>Despre noi</h2>
+        <p>
+          Suntem o echipă de tineri din Oradea care vrea ca fiecare casă și
+          fiecare firmă să fie în siguranță.
+        </p>
+        <!-- Aici scrieți câteva propoziții despre voi, cu cuvintele voastre. -->
+      </section>
+    </main>
+
+    <!-- ===== SUBSOLUL ===== -->
+    <footer>
+      <!-- <footer> = partea de jos a paginii -->
+      <p>&copy; 2026 NexTech Sisteme de Securitate · Oradea</p>
+      <!-- &copy; = simbolul © -->
+      <p>
+        <a href="mailto:contact@nextech.ro">contact@nextech.ro</a> ·
+        <a href="tel:+40700000000">0700 000 000</a>
+      </p>
+      <!-- mailto: deschide aplicația de e-mail, tel: pornește un apel pe telefon -->
+    </footer>
+  </body>
+</html>
