@@ -1,4 +1,4 @@
-# NexTech – Sisteme de securitate
+# NexTech Sisteme de securitate
 
 Site web pentru o firmă care montează sisteme de securitate: camere de supraveghere, alarme și control acces, în Oradea.
 
