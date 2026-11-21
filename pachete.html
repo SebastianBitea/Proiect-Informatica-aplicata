@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- Pagina "Pachete": 3 pachete de securitate, cu ce conțin și cât costă. -->
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pachete de securitate NexTech: Start, Confort și Business, cu prețuri orientative, în Oradea.">
+    <title>Pachete | NexTech</title>
+
+    <!-- Aici vom lega mai târziu fișierul CSS:
+         <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+
+    <!-- ===== ANTET: este la fel pe toate paginile ===== -->
+    <header>
+        <p><strong>NexTech</strong> · Sisteme de securitate</p>
+
+        <!-- Meniul de navigare: o listă de linkuri către celelalte pagini.
+             aria-current="page" arată care este pagina curentă. -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="servicii.html">Servicii</a></li>
+                <li><a href="pachete.html" aria-current="page">Pachete</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== CONȚINUTUL PRINCIPAL al paginii ===== -->
+    <main>
+
+        <!-- Pe fiecare pagină avem un singur <h1> -->
+        <h1>Pachete de securitate</h1>
+        <p>Am pregătit trei pachete gata făcute, cu montajul inclus. Prețurile sunt orientative și pot varia în funcție de locație.</p>
+
+        <!-- Pachetul 1 -->
+        <section id="start">
+            <h2>Pachet Start</h2>
+            <p>Pentru apartament sau garsonieră.</p>
+            <ul>
+                <li>2 camere de interior HD</li>
+                <li>Alarmă cu 2 senzori de mișcare</li>
+                <li>Montaj și configurare incluse</li>
+            </ul>
+            <p><strong>Preț orientativ: de la 1.490 lei</strong></p>
+        </section>
+
+        <!-- Pachetul 2 -->
+        <section id="confort">
+            <h2>Pachet Confort</h2>
+            <p>Pentru casă cu curte.</p>
+            <ul>
+                <li>4 camere (2 de interior și 2 de exterior 4K) cu înregistrator</li>
+                <li>Alarmă cu senzori la toate ușile</li>
+                <li>Interfon video</li>
+                <li>Montaj și configurare incluse</li>
+            </ul>
+            <p><strong>Preț orientativ: de la 3.900 lei</strong></p>
+        </section>
+
+        <!-- Pachetul 3 -->
+        <section id="business">
+            <h2>Pachet Business</h2>
+            <p>Pentru firme, magazine și birouri.</p>
+            <ul>
+                <li>8 camere de exterior 4K cu înregistrator</li>
+                <li>Alarmă cu sirenă</li>
+                <li>Control acces cu cartelă</li>
+                <li>Montaj, configurare și mentenanță 12 luni</li>
+            </ul>
+            <p><strong>Preț orientativ: de la 7.800 lei</strong></p>
+        </section>
+
+        <!-- Tabel de comparare (cum am învățat la Lucrarea 2):
+             <table> = tabelul, <caption> = titlul lui,
+             <thead> = antetul, <tbody> = corpul,
+             <tr> = un rând, <th> = celulă de titlu, <td> = celulă obișnuită -->
+        <section id="comparatie">
+            <h2>Compară pachetele</h2>
+            <table>
+                <caption>Ce conține fiecare pachet</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Ce primești</th>
+                        <th scope="col">Start</th>
+                        <th scope="col">Confort</th>
+                        <th scope="col">Business</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Camere video</th>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Alarmă</th>
+                        <td>2 senzori</td>
+                        <td>toate ușile</td>
+                        <td>cu sirenă</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Interfon video</th>
+                        <td>nu</td>
+                        <td>da</td>
+                        <td>nu</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Control acces</th>
+                        <td>nu</td>
+                        <td>nu</td>
+                        <td>da</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Preț orientativ</th>
+                        <td>de la 1.490 lei</td>
+                        <td>de la 3.900 lei</td>
+                        <td>de la 7.800 lei</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Link către pagina de contact -->
+        <section id="oferta">
+            <h2>Vrei o ofertă?</h2>
+            <p>Spune-ne ce ai nevoie și îți facem o ofertă gratuită. <a href="contact.html">Mergi la pagina Contact</a>.</p>
+        </section>
+
+    </main>
+
+    <!-- ===== SUBSOL: același pe toate paginile ===== -->
+    <footer>
+        <p>© 2026 NexTech Sisteme de Securitate · Oradea</p>
+    </footer>
+
+</body>
+</html>
