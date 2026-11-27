@@ -9,8 +9,8 @@
     <!-- viewport = pagina se potrivește pe ecranul telefonului -->
     <title>NexTech Sisteme de securitate în Oradea</title>
     <!-- title = textul din tab-ul browserului -->
-    <!-- Mai târziu, când avem fișierul de stiluri, adăugăm aici linia:
-         <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- link = legăm fișierul de stiluri, comun pentru toate paginile -->
   </head>
   <body>
     <!-- <body> = tot ce se vede în pagină -->
@@ -38,22 +38,28 @@
     <!-- ===== CONȚINUTUL PRINCIPAL AL PAGINII ===== -->
     <main>
       <!-- <main> = conținutul principal. Există un singur <main> pe pagină. -->
-      <section id="prezentare">
+      <section id="prezentare" class="erou">
         <!-- <section> = o secțiune din pagină, cu un titlu al ei -->
-        <h1>Sisteme de securitate pentru casă și firmă</h1>
-        <!-- h1 = titlul principal. Pe fiecare pagină avem un singur h1. -->
-        <p>
-          NexTech montează camere de supraveghere, sisteme de alarmă și control
-          acces în Oradea și împrejurimi.
-        </p>
-        <!-- <p> = un paragraf de text -->
-        <p><a href="contact.html">Cere o ofertă gratuită</a></p>
+        <!-- class="erou" = bannerul: pe laptop textul și poza stau una lângă alta -->
+        <div>
+          <h1>Sisteme de securitate pentru casă și firmă</h1>
+          <!-- h1 = titlul principal. Pe fiecare pagină avem un singur h1. -->
+          <p>
+            NexTech montează camere de supraveghere, sisteme de alarmă și control
+            acces în Oradea și împrejurimi.
+          </p>
+          <!-- <p> = un paragraf de text -->
+          <p><a href="contact.html" class="buton">Cere o ofertă gratuită</a></p>
+          <!-- class="buton" = linkul arată ca un buton (stilul e în css/style.css) -->
+        </div>
+        <img src="img/acasa.jpg" alt="Două camere de supraveghere mici, montate pe peretele gri al unei clădiri" width="1280" height="853" />
+        <!-- alt = descrierea pozei, pentru cine nu o poate vedea -->
       </section>
 
       <section id="de-ce-noi">
         <h2>De ce să ne alegi</h2>
         <!-- h2 = titlu de secțiune, mai mic decât h1 -->
-        <ul>
+        <ul class="avantaje">
           <li>Evaluare gratuită la domiciliu</li>
           <li>Echipamente cu garanție de 2 ani</li>
           <li>Montaj în maximum 48 de ore</li>
@@ -63,6 +69,7 @@
 
       <section id="despre">
         <h2>Despre noi</h2>
+        <img src="img/echipa.jpg" alt="Tehnician cu cască galbenă și mănuși, care trage un cablu pe acoperișul unei clădiri" width="1280" height="855" />
         <p>
           Suntem o echipă de tineri din Oradea care vrea ca fiecare casă și
           fiecare firmă să fie în siguranță.

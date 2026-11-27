@@ -1,0 +1,285 @@
+/* =========================================================
+   NexTech – fișierul de stiluri comun pentru toate paginile
+   Se leagă în <head> cu: <link rel="stylesheet" href="css/style.css">
+   ========================================================= */
+
+/* ----- 1. Variabile: culorile și mărimile folosite peste tot ----- */
+/* Le schimbi aici o singură dată și se schimbă pe tot site-ul. */
+:root {
+  --albastru: #0b3d91;        /* culoarea principală (meniu, butoane, titluri) */
+  --albastru-inchis: #072a66; /* butonul când treci cu mouse-ul */
+  --accent: #f2a900;          /* galben, pentru evidențieri */
+  --text: #1d2433;            /* culoarea textului */
+  --text-slab: #5a6478;       /* text secundar */
+  --fundal: #f5f7fb;          /* fundalul paginii */
+  --alb: #ffffff;
+  --chenar: #d9dfeb;
+  --raza: 12px;               /* cât de rotunjite sunt colțurile */
+  --umbra: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --latime-max: 1100px;       /* conținutul nu se lățește mai mult de atât */
+}
+
+/* ----- 2. Reguli de bază ----- */
+* {
+  box-sizing: border-box;     /* lățimea include și padding-ul: mai ușor de calculat */
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--fundal);
+}
+
+img {
+  max-width: 100%;            /* nicio poză nu iese din ecran */
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--albastru);
+}
+
+h1, h2 {
+  line-height: 1.25;
+  color: var(--albastru);
+}
+
+/* ----- 3. Antetul și meniul (Flexbox) ----- */
+header {
+  background: var(--albastru);
+  color: var(--alb);
+  padding: 12px 20px;
+  display: flex;              /* numele firmei și meniul pe același rând */
+  flex-wrap: wrap;            /* pe ecran îngust, meniul trece dedesubt */
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+nav ul {
+  list-style: none;           /* fără buline */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+nav a {
+  display: block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--alb);
+  text-decoration: none;
+  transition: background-color 0.2s ease;   /* schimbarea de culoare se face lin */
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+nav a[aria-current="page"] {                 /* pagina pe care ești acum */
+  background: var(--alb);
+  color: var(--albastru);
+  font-weight: bold;
+}
+
+/* ----- 4. Conținutul principal ----- */
+main {
+  max-width: var(--latime-max);
+  margin: 0 auto;             /* centrat pe ecran */
+  padding: 24px 20px 40px;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+/* ----- 5. Bannerul de pe prima pagină (Grid) ----- */
+.erou {
+  display: grid;
+  grid-template-columns: 1fr; /* pe telefon: text, apoi poza */
+  gap: 24px;
+  align-items: center;
+}
+
+.erou img {
+  border-radius: var(--raza);
+  box-shadow: var(--umbra);
+}
+
+/* ----- 6. Grila de carduri (Grid) ----- */
+/* Atâtea coloane câte încap, fiecare de minimum 260px:
+   pe telefon 1, pe tabletă 2, pe laptop 3. */
+.grila {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ----- 7. Cardul ----- */
+.card {
+  background: var(--alb);
+  border: 1px solid var(--chenar);
+  border-radius: var(--raza);
+  padding: 20px;
+  box-shadow: var(--umbra);
+  margin-bottom: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {                 /* cardul se ridică puțin sub mouse */
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;          /* poza umple spațiul fără să se deformeze */
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+}
+
+.pret {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--albastru);
+}
+
+/* Lista de avantaje de pe prima pagină, ca niște carduri mici */
+.avantaje {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.avantaje li {
+  background: var(--alb);
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: var(--umbra);
+}
+
+/* ----- 8. Butonul ----- */
+.buton {
+  display: inline-block;
+  background: var(--albastru);
+  color: var(--alb);
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.buton:hover {
+  background: var(--albastru-inchis);
+  transform: scale(1.04);     /* se mărește puțin */
+}
+
+/* ----- 9. Tabelul de comparare ----- */
+.tabel-scroll {
+  overflow-x: auto;           /* pe telefon tabelul se derulează în cadrul lui, nu iese din ecran */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--alb);
+  min-width: 480px;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+th,
+td {
+  border: 1px solid var(--chenar);
+  padding: 10px 12px;
+  text-align: left;
+}
+
+thead th {
+  background: var(--albastru);
+  color: var(--alb);
+}
+
+tbody tr:nth-child(even) {    /* rândurile pare, puțin colorate */
+  background: #eef2f9;
+}
+
+/* Poza de la „Despre noi”: nu mai lată de 480px, cu colțuri rotunjite */
+#despre img {
+  max-width: 480px;
+  width: 100%;
+  border-radius: var(--raza);
+  margin-bottom: 12px;
+}
+
+/* ----- 10. Pagina de contact ----- */
+address {
+  font-style: normal;
+}
+
+/* ----- 11. Subsolul ----- */
+footer {
+  background: var(--text);
+  color: #c9cfdb;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 4px 0;
+}
+
+footer a {
+  color: var(--alb);
+}
+
+/* ----- 12. Ecrane late (de la 800px în sus) ----- */
+@media (min-width: 800px) {
+  .erou {
+    grid-template-columns: 1fr 1fr;   /* text în stânga, poza în dreapta */
+  }
+
+  main {
+    padding-top: 40px;
+  }
+}
+
+/* ----- 13. Telefon (până la 500px) ----- */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+}
